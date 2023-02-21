@@ -1,12 +1,12 @@
 import Layout from "../../components/layout"
 
-const Details = () => {
+const Popular = () => {
 
     return (
         <Layout>
-            <h1>Details</h1>
+            <h1>bestMovies</h1>
+        </Layout>
             
-        </Layout> 
     )
 }
-export {Details}
+export {Popular}

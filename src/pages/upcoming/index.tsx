@@ -1,12 +1,14 @@
 import Layout from "../../components/layout"
 
-const Details = () => {
+const Upcoming = () => {
 
     return (
+
         <Layout>
-            <h1>Details</h1>
-            
+            <h1>comingSoon</h1>
+         
         </Layout> 
+        
     )
 }
-export {Details}
+export {Upcoming}

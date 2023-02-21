@@ -1,36 +1,34 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+
+import { Navbar as NavbarBTS, Container, Nav } from "react-bootstrap";
+import { NavLink } from 'react-router-dom';
 
 const NavbarComp = () => {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <Container>
-        <Navbar.Brand href="#home"> TP Movies</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="me-auto"/>
-          <Nav>
-            <Nav.Link href="#deets">Próximamente</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Mejores Peliculas
-            </Nav.Link>
-            <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <NavbarBTS bg="light" expand="lg">
+    <Container fluid>
+      <NavbarBTS.Brand href="#home">TP Movies</NavbarBTS.Brand>
+      <NavbarBTS.Toggle aria-controls="basic-navbar-nav" />
+      <NavbarBTS.Collapse id="basic-navbar-nav">
+        <Nav className="ms-auto">
+          <NavLink className="nav-link" to="/">
+            Home
+          </NavLink>
+          <NavLink className="nav-link" to="/upcoming">
+            Upcoming
+          </NavLink>
+          <NavLink className="nav-link" to="/popular">
+            Popular
+          </NavLink>
+          <NavLink className="nav-link" to="/search">
+            Search
+          </NavLink>
+          <NavLink className="nav-link" to="/login">
+            Login
+          </NavLink>
+        </Nav>
+      </NavbarBTS.Collapse>
+    </Container>
+  </NavbarBTS>
   );
 }
 
