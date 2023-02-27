@@ -1,6 +1,11 @@
+import "./style.scss"
+
+
 const FooterComp = () => {
     return (
-        <h1>Footer</h1>
+        <div className="main-footer">
+            Hecho by Ana Manera
+        </div>
     )
 }
 export {FooterComp}
