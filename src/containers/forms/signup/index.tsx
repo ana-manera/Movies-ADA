@@ -13,8 +13,9 @@ const SignUp = () => {
   }
 
     return (
+      <div className="d-flex justify-content-around">
         <Form onSubmit={handleSubmit(onSubmit)}>
-        <Form.Group className="mb-3" controlId="formBasicName">
+        <Form.Group className="mb-6" controlId="formBasicName">
           <Form.Label>Nombre</Form.Label>
           <Form.Control type="text" placeholder="Ingresar nombre" {...register("name")} />
           <Form.Text className="text-muted">
@@ -58,6 +59,7 @@ const SignUp = () => {
           Crear cuenta
         </Button>
       </Form>
+      </div>
 
     )
         
