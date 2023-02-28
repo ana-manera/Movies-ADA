@@ -1,5 +1,5 @@
 import { Route,BrowserRouter,Routes } from "react-router-dom";
-import { NotFound,Login, Dashboard, Details, Search, Popular, Upcoming } from "./pages";
+import { NotFound,Register, Dashboard, Details, Search, Popular, Upcoming, Login } from "./pages";
 
 
 
@@ -9,6 +9,7 @@ const App = ()=> {
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
         <Route path="search" element={<Search />} />
         <Route path="upcoming" element={<Upcoming />} />
         <Route path="popular" element={<Popular />} />
