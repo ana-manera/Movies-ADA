@@ -1,10 +1,12 @@
 
 import { Navbar as NavbarBTS, Container, Nav } from "react-bootstrap";
 import { NavLink } from 'react-router-dom';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+
 
 const NavbarComp = () => {
   return (
-    <NavbarBTS bg="light" expand="lg">
+    <NavbarBTS bg="dark" variant="dark" expand="lg">
     <Container fluid>
       <NavbarBTS.Brand href="#home">TP Movies</NavbarBTS.Brand>
       <NavbarBTS.Toggle aria-controls="basic-navbar-nav" />
@@ -22,9 +24,27 @@ const NavbarComp = () => {
           <NavLink className="nav-link" to="/search">
             Search
           </NavLink>
-          <NavLink className="nav-link" to="/login">
-            Login
-          </NavLink>
+          <NavDropdown title="User" id="collasible-nav-dropdown">
+              <NavDropdown.Item variant="dark" > 
+                <NavLink className="nav-link" to="/register">
+
+                  Register
+                </NavLink>
+              </NavDropdown.Item>
+              <NavDropdown.Item >
+                <NavLink className="nav-link" to="/login">
+                  Login
+                </NavLink>
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item >
+                <NavLink className="nav-link" to="/">
+                  Sign out 
+                </NavLink>
+              </NavDropdown.Item>
+            </NavDropdown>
+
+
         </Nav>
       </NavbarBTS.Collapse>
     </Container>

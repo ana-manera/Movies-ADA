@@ -1,13 +1,13 @@
-import { SignUp } from "../../containers"
 import Layout from "../../components/layout"
 
 const Login = () => {
 
     return (
         <Layout>
-            <SignUp/>
-        
+           <h1>Login</h1>
+            
         </Layout> 
+        
     )
 }
 export {Login}
