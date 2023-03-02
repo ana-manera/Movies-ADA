@@ -8,3 +8,4 @@
     }
 
 export type SignUpForm = Omit <User,"id" | "birthdate"> & { birthdate: Date}
+

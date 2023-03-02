@@ -1,5 +1,5 @@
 import { SignUpForm } from "../types"
-import apiRequest from "../utils/axios"
+import { apiRequest } from "../utils/axios"
 
 const add = async (userPrueba: SignUpForm) => {
     const response =await apiRequest.post("/users.json", userPrueba)
