@@ -1,14 +1,30 @@
-import { FC } from "react"
+import { FC, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useMe } from "../../hooks";
 
-//const publicRoutes = ["/login","/notFound", "/dashboard", "/register"]
-
+const publicRoutes = ["/login","/notFound", "/dashboard", "/register"]
 
 const withAuth = (Component: FC): FC => {
+  const Authenticated = () => {
+    const { me } = useMe();
 
-    const Authenticated = () => {
-        return <Component />
-    }
-    return Authenticated
-}
+    const location = useLocation();
+    const navigate = useNavigate();
 
-export { withAuth }
+    useEffect(() => {
+      if (me && publicRoutes.includes(location.pathname)) {
+        navigate("/");
+      }
+
+      if (!me && !publicRoutes.includes(location.pathname)) {
+        navigate("/login");
+      }
+    }, [me, location, navigate]);
+
+    return <Component />;
+  };
+
+  return Authenticated;
+};
+
+export { withAuth };
