@@ -32,6 +32,7 @@ const useMe = () => {
   };
 
   const forgotPassword = () => {
+    console.info("forgotPassword");
   };
 
   const loginWithToken = async () => {
@@ -53,6 +54,9 @@ const useMe = () => {
 
 
   const logout = async () => {
+    console.info("logout");
+    await servicesUser.update({ id: me?.id, token: null });
+    setMe(undefined);
   };
 
   return { me, login, signup, forgotPassword, loginWithToken, logout };
