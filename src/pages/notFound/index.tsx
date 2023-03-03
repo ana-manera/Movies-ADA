@@ -1,6 +1,7 @@
 import Layout from "../../components/layout"
+import { withAuth } from "../../hoc"
 
-const NotFound = () => {
+const NotFoundPage = () => {
 
     return (
         <Layout>
@@ -10,4 +11,4 @@ const NotFound = () => {
         
     )
 }
-export {NotFound}
+export const NotFound = withAuth(NotFoundPage)

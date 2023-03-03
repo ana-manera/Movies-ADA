@@ -9,12 +9,13 @@ const useMe = () => {
   const { me, setMe } = useContext(AuthContext);
 
   const login = async ({ email, password }: LoginForm) => {
-    console.info("login");
+    
     const user = await servicesUser.getBy("email", email);
+    console.info(user);
 
     if (user && user.password === password) {
       const { id, name, lastname } = user;
-
+      
       const token = tokenGenerator();
 
       servicesUser.update({ id, token });

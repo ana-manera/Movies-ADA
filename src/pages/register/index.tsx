@@ -1,8 +1,9 @@
 import { SignUp } from "../../containers"
 import Layout from "../../components/layout"
 import { Container } from "react-bootstrap"
+import { withAuth } from "../../hoc"
 
-const Register = () => {
+const RegisterPage = () => {
 
     return (
         <Layout>
@@ -12,4 +13,4 @@ const Register = () => {
         </Layout> 
     )
 }
-export {Register} 
+export const Register = withAuth( RegisterPage )
