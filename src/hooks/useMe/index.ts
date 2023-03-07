@@ -24,6 +24,7 @@ const useMe = () => {
 
       setMe({ id, name, lastname, email });
     } else {
+      setMe(null)
       console.log("login incorrecto");
     }
   };
@@ -49,7 +50,11 @@ const useMe = () => {
           lastname: user.lastname,
           email: user.email,
         });
+      } else {
+        setMe(null)
       }
+    } else {
+      setMe(null)
     }
   };
 
@@ -57,7 +62,7 @@ const useMe = () => {
   const logout = async () => {
     console.info("logout");
     await servicesUser.update({ id: me?.id, token: null });
-    setMe(undefined);
+    setMe(null);
   };
 
   return { me, login, signup, forgotPassword, loginWithToken, logout };

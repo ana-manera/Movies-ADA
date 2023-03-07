@@ -16,7 +16,7 @@ const withAuth = (Component: FC): FC => {
         navigate("/");
       }
 
-      if (!me && !publicRoutes.includes(location.pathname)) {
+      if (me === null && !publicRoutes.includes(location.pathname)) {
         navigate("/login");
       }
     }, [me, location, navigate]);

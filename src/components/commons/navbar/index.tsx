@@ -7,7 +7,7 @@ import { useMe } from "../../../hooks";
 
 const NavbarComp = () => {
   
-  const { logout } = useMe();
+  const { logout, me } = useMe();
 
   return (
     <NavbarBTS bg="dark" variant="dark" expand="lg">
@@ -40,10 +40,15 @@ const NavbarComp = () => {
                   Login
                 </NavLink>
               </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item >
-              <Nav.Link onClick={logout}>Sign out</Nav.Link>
-              </NavDropdown.Item>
+              {me &&
+                <>
+               <NavDropdown.Divider />
+               <NavDropdown.Item >
+               <Nav.Link onClick={logout}>Sign out</Nav.Link>
+               </NavDropdown.Item>
+               </>
+                }
+             
             </NavDropdown>
 
 
