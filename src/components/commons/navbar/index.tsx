@@ -2,9 +2,13 @@
 import { Navbar as NavbarBTS, Container, Nav } from "react-bootstrap";
 import { NavLink } from 'react-router-dom';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { useMe } from "../../../hooks";
 
 
 const NavbarComp = () => {
+  
+  const { logout, me } = useMe();
+
   return (
     <NavbarBTS bg="dark" variant="dark" expand="lg">
     <Container fluid>
@@ -36,12 +40,15 @@ const NavbarComp = () => {
                   Login
                 </NavLink>
               </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item >
-                <NavLink className="nav-link" to="/">
-                  Sign out 
-                </NavLink>
-              </NavDropdown.Item>
+              {me &&
+                <>
+               <NavDropdown.Divider />
+               <NavDropdown.Item >
+               <Nav.Link onClick={logout}>Sign out</Nav.Link>
+               </NavDropdown.Item>
+               </>
+                }
+             
             </NavDropdown>
 
 

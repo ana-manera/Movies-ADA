@@ -1,6 +1,7 @@
 import Layout from "../../components/layout"
+import { withAuth } from "../../hoc"
 
-const Popular = () => {
+const PopularPage = () => {
 
     return (
         <Layout>
@@ -9,4 +10,4 @@ const Popular = () => {
             
     )
 }
-export {Popular}
+export const Popular = withAuth(PopularPage)
