@@ -23,6 +23,8 @@ const CarouselComp: FC< Movies > = ({items}) => {
       </Carousel.Item>
     ))}
   </Carousel>
+
+
   );
 }
 

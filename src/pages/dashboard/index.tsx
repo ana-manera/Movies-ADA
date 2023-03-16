@@ -2,9 +2,11 @@ import { CarouselComp } from "../../components/commons"
 import Layout from "../../components/layout"
 import { useEffect, useState } from "react";
 import { getCarousel } from "../../services/movies";
+import { SliderComp } from "../../components/commons/slider";
 
 const Dashboard = () => {
     const [movies, setMovies] = useState([]);
+    const [popular, setPopular] = useState([]);
 
     useEffect(() => {
 
@@ -14,7 +16,8 @@ const Dashboard = () => {
 
     return (
         <Layout>
-            <CarouselComp items={movies} /> 
+            <CarouselComp items= {movies} /> 
+            <SliderComp items= {popular}/>
             
         </Layout> 
     )
