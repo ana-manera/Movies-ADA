@@ -20,8 +20,8 @@ const Dashboard = () => {
     return (
         <Layout>
             <CarouselComp items= {movies} /> 
-            <SliderComp items= {popular}/>
-            <SliderComp items = {topRated}/>
+            <SliderComp items= {popular} title= {"Popular Movies"}/>
+            <SliderComp items = {topRated} title= {"Top Rated Movies"} />
             
         </Layout> 
     )

@@ -1,19 +1,21 @@
 import { FC } from "react";
-import { Container } from "react-bootstrap";
 import { base } from '../../../constants';
+import "./style.scss"
 
 type SliderMovies = {
   items: [] | any
+  title: string
 }
 
-const SliderComp: FC< SliderMovies >  = ({items}) => {
+const SliderComp: FC< SliderMovies >  = ({items, title}) => {
   return (
-    <Container>
-      <div className="row pb-4">
-      {items?.map((item:any) => <img key= {item.id} src={`${base + item.poster_path}`} alt="First slide"/>)
+    <div className="scroll">
+      <h2>{title}</h2>
+      <div  className="row pb-2">
+      {items?.map((item:any) => <img className="col img-scroll" key= {item.id} src={`${base + item.poster_path}`} alt="First slide"/>)
       }
       </div>
-    </Container>
+    </div>
   );
 }
 
