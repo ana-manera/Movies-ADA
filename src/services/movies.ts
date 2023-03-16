@@ -11,4 +11,11 @@ const getAllPopular =  async () => {
   return response.data;
 };
 
-export { getCarousel, getAllPopular }
+const getAllTopRated =  async () => {
+  const response = await apiMovies.get(endpoints.movie_top_rated );
+  return response.data;
+};
+
+export const servicesMovies = { getCarousel, getAllPopular, getAllTopRated }
+
+
