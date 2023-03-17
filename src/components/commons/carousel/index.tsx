@@ -1,6 +1,7 @@
 import Carousel from 'react-bootstrap/Carousel';
 import { FC } from "react";
 import { base } from '../../../constants';
+import "./style.scss"
 
 type Movies = {
     items: [] | any
@@ -12,7 +13,7 @@ const CarouselComp: FC< Movies > = ({items}) => {
     {items?.map((item: any) => (
       <Carousel.Item key={item.id}>
         <img
-          className="d-block w-100"
+          className="d-block w-100 img-carousel"
           src={`${base + item.backdrop_path}`}
           alt="First movie"
         />
