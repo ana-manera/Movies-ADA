@@ -1,3 +1,4 @@
+import { CardComp } from "../../components/commons"
 import Layout from "../../components/layout"
 
 const Upcoming = () => {
@@ -6,6 +7,7 @@ const Upcoming = () => {
 
         <Layout>
             <h1>comingSoon</h1>
+            <CardComp/>
          
         </Layout> 
         
