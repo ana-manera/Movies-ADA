@@ -7,7 +7,7 @@ type SliderMovies = {
   title: string
 }
 
-const SliderComp: FC< SliderMovies >  = ({items, title}) => {
+const Slider: FC< SliderMovies >  = ({items, title}) => {
   return (
     <div className="scroll">
       <h2>{title}</h2>
@@ -19,4 +19,4 @@ const SliderComp: FC< SliderMovies >  = ({items, title}) => {
   );
 }
 
-export {SliderComp};
+export {Slider};

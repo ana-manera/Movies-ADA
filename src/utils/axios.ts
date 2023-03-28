@@ -3,9 +3,6 @@ import axios from "axios";
 export const apiRequest = axios.create ({
 
     baseURL: "https://movies-38f90-default-rtdb.firebaseio.com",
-    params: {
-        api_key: "prueba-api-key"
-    }
 }) 
 
 export const apiMovies = axios.create({

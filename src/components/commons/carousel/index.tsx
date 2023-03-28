@@ -7,7 +7,7 @@ type Movies = {
     items: [] | any
   }
 
-const CarouselComp: FC< Movies > = ({items}) => {
+const Carrusel: FC< Movies > = ({items}) => {
   return (
     <Carousel fade>
     {items?.map((item: any) => (
@@ -29,4 +29,4 @@ const CarouselComp: FC< Movies > = ({items}) => {
   );
 }
 
-export {CarouselComp};
+export {Carrusel};
