@@ -3,8 +3,10 @@ import Layout from "../../components/layout"
 import { useEffect, useState } from "react";
 import { servicesMovies } from "../../services/movies";
 import { Slider } from "../../components/commons/slider";
+import { withAuth } from "../../hoc"
 
-const Dashboard = () => {
+
+const DashboardPage = () => {
     const [movies, setMovies] = useState([]);
     const [popular, setPopular] = useState([]);
     const [topRated, setTopRated] = useState([]);
@@ -26,4 +28,5 @@ const Dashboard = () => {
         </Layout> 
     )
 }
-export {Dashboard}
+
+export const Dashboard = withAuth(DashboardPage)

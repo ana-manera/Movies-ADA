@@ -1,13 +1,20 @@
 import Layout from "../../components/layout"
+import { LoginForm } from "../../containers"
+import { withAuth } from "../../hoc"
+import { Container } from "react-bootstrap"
+import { Link } from "react-router-dom"
 
-const Login = () => {
 
+const LoginPage = () => {
+  
     return (
         <Layout>
-           <h1>Login</h1>
+            <Container className="p-8">
+                <LoginForm/>
+                <Link to= "/register"> Si no estas registrado, haz click aquí</Link>
+            </Container>
             
         </Layout> 
-        
     )
 }
-export {Login}
+export const Login = withAuth(LoginPage)
