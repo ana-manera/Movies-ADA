@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 import { SignUpForm, User } from "../types"
 import apiRequest from "../utils/axios"
 import { mapToArray } from "../helpers/mapToArray"
+=======
+import { SignUpForm } from "../types"
+import { apiRequest } from "../utils/axios"
+>>>>>>> main
 
 const add = async (userPrueba: SignUpForm) => {
     const response =await apiRequest.post("/users.json", userPrueba)

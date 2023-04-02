@@ -1,3 +1,4 @@
 export { Main } from "./main"
-export { FooterComp } from "./footer"
+export { Footer } from "./footer"
 export { Header } from "./header"
+export { Carrusel } from "./carousel"
